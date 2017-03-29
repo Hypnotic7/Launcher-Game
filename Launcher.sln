@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LauncherDisplay", "WpfApplication1\LauncherDisplay.csproj", "{BC6832A2-106B-4CAF-B4DC-51FE77917684}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LauncherDisplay", "LauncherDisplay\LauncherDisplay.csproj", "{BC6832A2-106B-4CAF-B4DC-51FE77917684}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessLogic", "BuisnessLogic\BuisnessLogic.csproj", "{01DF7AE0-EFF6-47BB-8262-0E49E39601E9}"
 EndProject
