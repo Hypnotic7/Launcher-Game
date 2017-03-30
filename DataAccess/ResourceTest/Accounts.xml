@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Accounts>
+  <Account>
+    <AccountID>1</AccountID>
+    <AccountName>Test</AccountName>
+    <Password>Test1</Password>
+    <Email>test@something.com</Email>
+  </Account>
+
+</Accounts>

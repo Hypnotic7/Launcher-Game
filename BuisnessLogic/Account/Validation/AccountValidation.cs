@@ -27,7 +27,5 @@ namespace BuisnessLogic
             }
             return accountValidationStatus;
         }
-
-
     }
 }
