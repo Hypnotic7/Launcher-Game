@@ -21,7 +21,7 @@ namespace LauncherDisplay.Controller
         public bool ProcessValidation()
         {
             AccountValidation accountValidation = new AccountValidation(new RepositoryFactory<AccountEntity>(),
-                "somestring");
+                "mongodb://192.168.99.100:32768/local");
             var accountValidationStatus = accountValidation.ValidateAccount(Account.AccountName, Account.Password);
             if (accountValidationStatus.IsValid)
                 AccountEntity = accountValidationStatus.Account;

@@ -4,16 +4,15 @@ using MongoDB.Driver;
 
 namespace DataAccess
 {
-    public class AccountRepository : MongoRepository, IDataAccess<AccountEntity>
+    public class AccountRepositoryMongo : MongoRepository, IDataAccess<AccountEntity>
     {
-        public string CollectionName => "Somestring";
-        public static readonly Func<string, AccountRepository> CreateAccountRepository = c => { return new AccountRepository(new MongoClient()); };
+        public string CollectionName => "Accounts";
+        public static readonly Func<string, AccountRepositoryMongo> CreateAccountRepository = c => { return new AccountRepositoryMongo(new MongoClient()); };
 
-        private AccountRepository(IMongoClient mongoClient) : base(mongoClient)
+        private AccountRepositoryMongo(IMongoClient mongoClient) : base(mongoClient)
         {
             
         }
-
         
         public void Add(AccountEntity entity)
         {
