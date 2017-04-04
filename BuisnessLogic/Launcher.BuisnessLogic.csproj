@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+    <ProjectReference Include="..\DataAccess\Launcher.DataAccess.csproj">
       <Project>{f1f5d7a2-fd84-4a5d-b413-fd6c3a6422e6}</Project>
-      <Name>DataAccess</Name>
+      <Name>Launcher.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
