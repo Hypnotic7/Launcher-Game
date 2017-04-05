@@ -1,15 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LauncherDisplay", "LauncherDisplay\LauncherDisplay.csproj", "{BC6832A2-106B-4CAF-B4DC-51FE77917684}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Display", "LauncherDisplay\Launcher.Display.csproj", "{BC6832A2-106B-4CAF-B4DC-51FE77917684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessLogic", "BuisnessLogic\BuisnessLogic.csproj", "{01DF7AE0-EFF6-47BB-8262-0E49E39601E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BuisnessLogic", "BuisnessLogic\Launcher.BuisnessLogic.csproj", "{01DF7AE0-EFF6-47BB-8262-0E49E39601E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{F1F5D7A2-FD84-4A5D-B413-FD6C3A6422E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.DataAccess", "DataAccess\Launcher.DataAccess.csproj", "{F1F5D7A2-FD84-4A5D-B413-FD6C3A6422E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LauncherLogicTest", "LauncherLogicTest\LauncherLogicTest.csproj", "{DA8AEA85-92AA-454F-8408-81B578C64A80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic.Test", "LauncherLogicTest\Launcher.BusinessLogic.Test.csproj", "{DA8AEA85-92AA-454F-8408-81B578C64A80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.API", "LauncherAPI\Launcher.API.csproj", "{CA76BEBB-148F-46CF-B07E-05106A406529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Integration.Tests", "Launcher.Integration.Tests\Launcher.Integration.Tests.csproj", "{C9A3A3E0-4E88-4030-8164-406791A76BCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{DA8AEA85-92AA-454F-8408-81B578C64A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA8AEA85-92AA-454F-8408-81B578C64A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA8AEA85-92AA-454F-8408-81B578C64A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA76BEBB-148F-46CF-B07E-05106A406529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA76BEBB-148F-46CF-B07E-05106A406529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA76BEBB-148F-46CF-B07E-05106A406529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA76BEBB-148F-46CF-B07E-05106A406529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A3A3E0-4E88-4030-8164-406791A76BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A3A3E0-4E88-4030-8164-406791A76BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A3A3E0-4E88-4030-8164-406791A76BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A3A3E0-4E88-4030-8164-406791A76BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
