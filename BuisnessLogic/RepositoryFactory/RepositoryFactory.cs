@@ -11,7 +11,7 @@ namespace BuisnessLogic.Factory
             switch (type)
             {
                 case "AccountRepository":
-                    return (IDataAccess<T>)AccountRepositoryMongoDB.CreateAccountRepository(connectionString);
+                    return (IDataAccess<T>)AccountRepository.CreateAccountRepository(connectionString);
                 default:
                     throw new ArgumentException(type + " Could not be found");
 
