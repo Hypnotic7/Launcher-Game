@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Display", "LauncherDisplay\Launcher.Display.csproj", "{BC6832A2-106B-4CAF-B4DC-51FE77917684}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic.Test", "LauncherLogicTest\Launcher.BusinessLogic.Test.csproj", "{DA8AEA85-92AA-454F-8408-81B578C64A80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Integration.Tests", "Launcher.Integration.Tests\Launcher.Integration.Tests.csproj", "{C9A3A3E0-4E88-4030-8164-406791A76BCF}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Launcher.UI.Electron", "Launcher.UI.Electron\Launcher.UI.Electron.njsproj", "{EE693465-7B5C-461A-9DFC-654BE31440DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C9A3A3E0-4E88-4030-8164-406791A76BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9A3A3E0-4E88-4030-8164-406791A76BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9A3A3E0-4E88-4030-8164-406791A76BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE693465-7B5C-461A-9DFC-654BE31440DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE693465-7B5C-461A-9DFC-654BE31440DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE693465-7B5C-461A-9DFC-654BE31440DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE693465-7B5C-461A-9DFC-654BE31440DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
