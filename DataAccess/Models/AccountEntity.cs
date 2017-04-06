@@ -1,8 +1,13 @@
-﻿namespace DataAccess
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace DataAccess
 {
     public class AccountEntity
     {
-        public int AccountID { get; set; }
+        [BsonElement("_id")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string AccountID { get; set; }
         public string AccountName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }

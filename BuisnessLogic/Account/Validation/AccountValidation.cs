@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography;
+using System.Text;
 using BuisnessLogic.Account.Validation;
 using DataAccess;
 using DataAccess.Interface;
@@ -21,13 +23,24 @@ namespace BuisnessLogic
                 var account = AccountRepository.Find(accountName);
                 if (!account.Equals(null))
                 {
-                    accountValidationStatus.IsValid = account.Password.Equals(password);
+                    accountValidationStatus.IsValid = account.Password.Equals(ComputePasswordHashValue(password));
                     accountValidationStatus.Account = account;
                 }
             }
             return accountValidationStatus;
         }
 
+        private string ComputePasswordHashValue(string password)
+        {
+            var hasBytes = MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(password));
+            StringBuilder stringBuilder =  new StringBuilder();
 
+            for (var i = 0; i < hasBytes.Length; i++)
+            {
+                stringBuilder.Append(hasBytes[i].ToString("x2"));
+            }
+
+            return stringBuilder.ToString();
+        }
     }
 }
