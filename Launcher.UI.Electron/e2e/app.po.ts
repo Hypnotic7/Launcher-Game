@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Laucher.GamePage {
+export class GamePage {
   navigateTo() {
     return browser.get('/');
   }

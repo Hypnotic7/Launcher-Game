@@ -38,6 +38,7 @@
     <Content Include=".angular-cli.json" />
     <Content Include="app\app.component.css" />
     <Content Include="app\app.component.html" />
+    <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
@@ -48,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
+    <Folder Include="e2e\" />
     <Folder Include="environments\" />
     <Folder Include="model\" />
     <Folder Include="controller\" />
@@ -57,6 +59,8 @@
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\app.po.ts" />
     <TypeScriptCompile Include="environments\environment.prod.ts" />
     <TypeScriptCompile Include="environments\environment.ts" />
   </ItemGroup>

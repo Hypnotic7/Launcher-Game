@@ -1,10 +1,10 @@
-import { Laucher.GamePage } from './app.po';
+import { GamePage } from './app.po';
 
 describe('laucher.game App', () => {
-  let page: Laucher.GamePage;
+  let page: GamePage;
 
   beforeEach(() => {
-    page = new Laucher.GamePage();
+    page = new GamePage();
   });
 
   it('should display message saying app works', () => {
