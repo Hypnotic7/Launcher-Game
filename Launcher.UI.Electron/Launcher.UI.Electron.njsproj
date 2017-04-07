@@ -38,6 +38,9 @@
     <Content Include=".angular-cli.json" />
     <Content Include="app\app.component.css" />
     <Content Include="app\app.component.html" />
+    <Content Include="app\Login\LoginPage.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
@@ -49,10 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
+    <Folder Include="app\Login\" />
     <Folder Include="e2e\" />
     <Folder Include="environments\" />
-    <Folder Include="model\" />
-    <Folder Include="controller\" />
     <Folder Include="view\" />
   </ItemGroup>
   <ItemGroup>
