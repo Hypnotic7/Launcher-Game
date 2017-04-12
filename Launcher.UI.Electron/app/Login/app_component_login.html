@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+        <label  id="account_name_label" name="account_name_label">Account Name: </label>
+        <input [(ngModel)] = "LoginModel.AccountName" type="text" id="account_name_input" name="account_name_input"/>        
+        <label id="password_label" name="password_label">Password: </label>
+        <input [(ngModel)] = "LoginModel.Password" type="password" id="password_input" name="password_input" />     
+        <button type="submit" id="login_button" name="login_button" (click)="LoginButtonClicked($event)">Login</button>
+        <button type="submit" id="create_account_button" name="create_account_button">Create Account</button>    
+</body>
+</html>
