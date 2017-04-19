@@ -7,8 +7,8 @@ export class LoginModel {
 
 @Component({
     selector: 'app-login',
-    templateUrl: './app_component_login.html',
-    styleUrls: ['./app_component_login.css']
+    templateUrl: './app/Login/app_component_login.html',
+    styleUrls: ['./app/Login/app_component_login.css']
 })
 
 export class LoginComponent {
