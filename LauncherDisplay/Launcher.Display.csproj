@@ -93,8 +93,8 @@
     </Compile>
     <Compile Include="Controller\Interfaces\IDisplayView.cs" />
     <Compile Include="Controller\LauncherController.cs" />
-    <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\CreateAccountController.cs" />
+    <Compile Include="Controller\LoginLogic.cs" />
     <Compile Include="Model\AccountModel.cs" />
     <Compile Include="Model\LauncherModel.cs" />
     <Compile Include="Model\LoginModel.cs" />
@@ -141,16 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BuisnessLogic\Launcher.BuisnessLogic.csproj">
-      <Project>{01df7ae0-eff6-47bb-8262-0e49e39601e9}</Project>
-      <Name>Launcher.BuisnessLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAccess\Launcher.DataAccess.csproj">
-      <Project>{F1F5D7A2-FD84-4A5D-B413-FD6C3A6422E6}</Project>
-      <Name>Launcher.DataAccess</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

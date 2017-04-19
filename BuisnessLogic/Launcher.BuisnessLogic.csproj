@@ -40,10 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\Validation\AccountValidation.cs" />
-    <Compile Include="Account\Validation\AccountValidationStatus.cs" />
-    <Compile Include="RepositoryFactory\IRepositoryFactory.cs" />
-    <Compile Include="RepositoryFactory\RepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -52,7 +48,10 @@
       <Name>Launcher.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Account\Validation\" />
+    <Folder Include="RepositoryFactory\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

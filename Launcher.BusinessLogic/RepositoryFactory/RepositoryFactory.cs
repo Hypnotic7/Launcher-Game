@@ -1,8 +1,8 @@
 ﻿using System;
-using DataAccess;
-using DataAccess.Interface;
+using Launcher.Data.Access.Interface;
+using Launcher.Data.Access.Repository.MongoRepository;
 
-namespace BuisnessLogic.Factory
+namespace Launcher.BusinessLogic.RepositoryFactory
 {
     public class RepositoryFactory<T> : IRepositoryFactory<T>
     {

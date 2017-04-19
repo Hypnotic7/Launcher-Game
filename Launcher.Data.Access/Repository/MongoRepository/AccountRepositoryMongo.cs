@@ -1,8 +1,10 @@
 ﻿using System;
-using DataAccess.Constants;
+using Launcher.Data.Access.Constants;
+using Launcher.Data.Access.Interface;
+using Launcher.Data.Access.Models;
 using MongoDB.Driver;
 
-namespace DataAccess
+namespace Launcher.Data.Access.Repository.MongoRepository
 {
     public class AccountRepositoryMongo : MongoRepository, IDataAccess<AccountEntity>
     {

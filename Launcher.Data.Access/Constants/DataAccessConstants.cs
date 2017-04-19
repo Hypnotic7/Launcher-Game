@@ -1,4 +1,4 @@
-﻿namespace DataAccess.Constants
+﻿namespace Launcher.Data.Access.Constants
 {
     public static class DataAccessConstants
     {

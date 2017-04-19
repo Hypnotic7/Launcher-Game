@@ -1,6 +1,4 @@
-﻿using BuisnessLogic;
-using BuisnessLogic.Factory;
-using DataAccess;
+﻿using DataAccess;
 using LauncherDisplay.Controller.Interfaces;
 using LauncherDisplay.Model;
 using LauncherDisplay.View;

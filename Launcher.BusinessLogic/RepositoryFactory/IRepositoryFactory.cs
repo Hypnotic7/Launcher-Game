@@ -1,4 +1,6 @@
-﻿namespace DataAccess.Interface
+﻿using Launcher.Data.Access.Interface;
+
+namespace Launcher.BusinessLogic.RepositoryFactory
 {
     public interface IRepositoryFactory<T>
     {

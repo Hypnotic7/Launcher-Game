@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace DataAccess
+namespace Launcher.Data.Access.Models
 {
     public class AccountEntity
     {

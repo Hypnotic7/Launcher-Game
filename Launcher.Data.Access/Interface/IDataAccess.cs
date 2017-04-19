@@ -1,4 +1,4 @@
-﻿namespace DataAccess
+﻿namespace Launcher.Data.Access.Interface
 {
     public interface IDataAccess<T>
     {

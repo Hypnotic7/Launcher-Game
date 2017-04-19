@@ -1,7 +1,7 @@
 ﻿using System;
 using MongoDB.Driver;
 
-namespace DataAccess
+namespace Launcher.Data.Access.Repository.MongoRepository
 {
     public abstract class MongoRepository
     {
