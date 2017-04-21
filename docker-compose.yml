@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  launcher.api:
+    image: launcher.api
+    build:
+      context: ./Launcher.API
+      dockerfile: Dockerfile
+  database:
+    image: "mongo:latest"
+    ports:
+    - "0.0.0.0:27017:27017"

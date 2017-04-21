@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic.Test", "LauncherLogicTest\Launcher.BusinessLogic.Test.csproj", "{DA8AEA85-92AA-454F-8408-81B578C64A80}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic", "Launcher.BusinessLogic\Launcher.BusinessLogic.csproj", "{C7B1F144-9A8F-4954-8DB3-9DD623053915}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Data.Access", "Launcher.Data.Access\Launcher.Data.Access.csproj", "{92430F82-D3A4-4C12-BCD4-94D7430F8861}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{24411694-0CCC-4A2B-9118-6283351F137D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{92430F82-D3A4-4C12-BCD4-94D7430F8861}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92430F82-D3A4-4C12-BCD4-94D7430F8861}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92430F82-D3A4-4C12-BCD4-94D7430F8861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24411694-0CCC-4A2B-9118-6283351F137D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24411694-0CCC-4A2B-9118-6283351F137D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24411694-0CCC-4A2B-9118-6283351F137D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24411694-0CCC-4A2B-9118-6283351F137D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  launcher.api:
+    build:
+      args:
+        source: ${DOCKER_BUILD_SOURCE}
+    volumes:
+      - ~/clrdbg:/clrdbg:ro
+    entrypoint: tail -f /dev/null
+    labels:
+      - "com.microsoft.visualstudio.targetoperatingsystem=linux"
+  database:
+      image: "mongo:latest"
+      ports:
+      - "0.0.0.0:27017:27017"
