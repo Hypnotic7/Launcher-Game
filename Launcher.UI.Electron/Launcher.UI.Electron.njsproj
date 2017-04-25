@@ -57,6 +57,7 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\Login\" />
+    <Folder Include="app\Services\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.module.ts" />
@@ -64,6 +65,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="app\Main.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\Services\login.service.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>

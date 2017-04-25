@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { LoginComponent } from 'logincomponent';
+import { LoginService } from "./Services/login.service";
 
 @NgModule({
   declarations: [
