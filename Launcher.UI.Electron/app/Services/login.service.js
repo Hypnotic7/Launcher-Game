@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var LoginService = (function () {
@@ -17,7 +16,13 @@ var LoginService = (function () {
         this.http = http;
     }
     LoginService.prototype.ValidateLogin = function (AccountName, AccountPassword) {
-        var response = this.http.get(this.url);
+        alert("start validating login");
+        var xHttpRequest = new XMLHttpRequest();
+        xHttpRequest.open("POST", this.url, false);
+        xHttpRequest.setRequestHeader("Content-type", "application/json");
+        xHttpRequest.send(JSON.stringify({ accountName: AccountName, accountPassword: AccountPassword }));
+        var response = xHttpRequest.responseText;
+        console.log(response);
         return true;
     };
     return LoginService;

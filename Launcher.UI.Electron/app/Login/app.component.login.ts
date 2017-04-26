@@ -11,12 +11,15 @@ export class LoginModel {
     selector: 'app-login',
     templateUrl: './app/Login/app_component_login.html',
     styleUrls: ['./app/Login/app_component_login.css'],
-    providers: [LoginService]
+    viewProviders: [LoginService]
 })
 
 export class LoginComponent {
     LoginModel: LoginModel = new LoginModel();
-    LoginService: LoginService = new LoginService(new Http(null,null));
+    LoginService: LoginService;
+    constructor(loginService : LoginService) {
+        this.LoginService = loginService;
+    }
 
     LoginButtonClicked(event) {
         alert("Account Name: " + this.LoginModel.AccountName + "\nPassword: " + this.LoginModel.Password);

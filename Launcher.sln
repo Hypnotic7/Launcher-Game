@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic.Test", "LauncherLogicTest\Launcher.BusinessLogic.Test.csproj", "{DA8AEA85-92AA-454F-8408-81B578C64A80}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Launcher.UI.Electron", "Launcher.UI.Electron\Launcher.UI.Electron.njsproj", "{EE693465-7B5C-461A-9DFC-654BE31440DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.API", "Launcher.API\Launcher.API.csproj", "{77297C76-3ECD-4EE6-BA13-724FED9D781C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Display", "LauncherDisplay\Launcher.Display.csproj", "{BC6832A2-106B-4CAF-B4DC-51FE77917684}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic", "Launcher.BusinessLogic\Launcher.BusinessLogic.csproj", "{C7B1F144-9A8F-4954-8DB3-9DD623053915}"
 EndProject
@@ -41,10 +39,6 @@ Global
 		{77297C76-3ECD-4EE6-BA13-724FED9D781C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77297C76-3ECD-4EE6-BA13-724FED9D781C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77297C76-3ECD-4EE6-BA13-724FED9D781C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC6832A2-106B-4CAF-B4DC-51FE77917684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC6832A2-106B-4CAF-B4DC-51FE77917684}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC6832A2-106B-4CAF-B4DC-51FE77917684}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC6832A2-106B-4CAF-B4DC-51FE77917684}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C7B1F144-9A8F-4954-8DB3-9DD623053915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C7B1F144-9A8F-4954-8DB3-9DD623053915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7B1F144-9A8F-4954-8DB3-9DD623053915}.Release|Any CPU.ActiveCfg = Release|Any CPU

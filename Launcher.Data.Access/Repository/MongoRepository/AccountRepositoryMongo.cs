@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Launcher.Data.Access.Constants;
 using Launcher.Data.Access.Interface;
 using Launcher.Data.Access.Models;
@@ -34,7 +35,11 @@ namespace Launcher.Data.Access.Repository.MongoRepository
         {
             var collection = this.Connect(DataAccessConstants.DatabaseName).GetCollection<AccountEntity>(CollectionName);
             var account = collection.Find(f => f.AccountName.Equals(accountName)).FirstOrDefault();
-            return new AccountEntity() { AccountID = account.AccountID, AccountName = account.AccountName, Password = account.Password, Email = account.Email};
+
+            if (account != null)
+             return new AccountEntity() { AccountID = account.AccountID, AccountName = account.AccountName, Password = account.Password, Email = account.Email};
+
+            throw new KeyNotFoundException($"Account Name not found: {accountName}");
         }
 
         

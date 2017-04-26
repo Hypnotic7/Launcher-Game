@@ -5,9 +5,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
 var login_service_1 = require("../Services/login.service");
 var LoginModel = (function () {
     function LoginModel() {
@@ -16,9 +17,9 @@ var LoginModel = (function () {
 }());
 exports.LoginModel = LoginModel;
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(loginService) {
         this.LoginModel = new LoginModel();
-        this.LoginService = new login_service_1.LoginService(new http_1.Http(null, null));
+        this.LoginService = loginService;
     }
     LoginComponent.prototype.LoginButtonClicked = function (event) {
         alert("Account Name: " + this.LoginModel.AccountName + "\nPassword: " + this.LoginModel.Password);
@@ -31,8 +32,9 @@ LoginComponent = __decorate([
         selector: 'app-login',
         templateUrl: './app/Login/app_component_login.html',
         styleUrls: ['./app/Login/app_component_login.css'],
-        providers: [login_service_1.LoginService]
-    })
+        viewProviders: [login_service_1.LoginService]
+    }),
+    __metadata("design:paramtypes", [login_service_1.LoginService])
 ], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=app.component.login.js.map

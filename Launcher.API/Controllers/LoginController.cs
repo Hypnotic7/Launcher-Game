@@ -32,14 +32,27 @@ namespace Launcher.API.Controllers
         public LoginResponse Post([FromBody]LoginRequest loginRequest)
         {
             AccountValidation accountValidation = new AccountValidation(new RepositoryFactory<AccountEntity>(),
-                "mongodb://127.0.0.1:27017");
-            var accountValidationStatus = accountValidation.ValidateAccount(loginRequest.AccountName, loginRequest.AccountPassword);
-
-            var returnMessage = accountValidationStatus.IsValid ? $@"{accountValidationStatus.Account.AccountName} has been found" : $@"{accountValidationStatus.Account.AccountName} Not Found";
-            return new LoginResponse() {
-                 IsValid = accountValidationStatus.IsValid,
-                 Message = returnMessage
-            };
+                "mongodb://192.168.99.100:32768");
+            
+            try
+            {
+                var accountValidationStatus = accountValidation.ValidateAccount(loginRequest.AccountName, loginRequest.AccountPassword);
+                var returnMessage = accountValidationStatus.IsValid ? $@"{accountValidationStatus.Account.AccountName} has been found" : $@"{accountValidationStatus.Account.AccountName} Not Found";
+                return new LoginResponse()
+                {
+                    IsValid = accountValidationStatus.IsValid,
+                    Message = returnMessage
+                };
+            }
+            catch (KeyNotFoundException keyNotFound)
+            {
+                return new LoginResponse()
+                {
+                    IsValid = false,
+                    Message = keyNotFound.Message
+                };
+            }
+           
         }
 
         // PUT api/values/5
