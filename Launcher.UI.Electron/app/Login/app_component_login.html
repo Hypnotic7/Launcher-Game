@@ -2,14 +2,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="app_component_login.css"/>
+    <link async href="http://fonts.googleapis.com/css?family=Aladin" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <link async href="http://fonts.googleapis.com/css?family=Antic" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-        <label  id="account_name_label" name="account_name_label">Account Name: </label>
-        <input [(ngModel)] = "LoginModel.AccountName" type="text" id="account_name_input" name="account_name_input"/>        
-        <label id="password_label" name="password_label">Password: </label>
-        <input [(ngModel)] = "LoginModel.Password" type="password" id="password_input" name="password_input" />     
-        <button type="submit" id="login_button" name="login_button" (click)="LoginButtonClicked($event)">Login</button>
-        <button type="submit" id="create_account_button" name="create_account_button">Create Account</button>    
+    <div class="container-fluid">
+        <form class="form-signin">
+            
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h2 class="form-signin-heading">MVProduction</h2>
+                    <label for="account_name_input" class="sr-only" id="account_name_label" name="account_name_label">Account Name: </label>
+                    <input class="form-control nput" [(ngModel)]="LoginModel.AccountName" type="text" id="account_name_input" name="account_name_input"/>
+                    <br/>
+                    <label for="password_input"class="sr-only" id="password_label" name="password_label">Password: </label>
+                    <input class="form-control nput" [(ngModel)]="LoginModel.Password" type="password" id="password_input" name="password_input"/>
+                    <br/><br/>
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit" id="login_button" name="login_button" (click)="LoginButtonClicked($event)">Login</button>
+                                </div>
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit" id="create_account_button" name="create_account_button">Create Account</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+           
+        </form>
+    </div>
+
+<!--<section class="intro">
+    <div class="inner">
+        <div class="content">
+            <h1>MVProduction</h1>
+            <label class="lbl"id="account_name_label" name="account_name_label">Account Name: </label>
+            <input class="nput" [(ngModel)]="LoginModel.AccountName" type="text" id="account_name_input" name="account_name_input"/>
+            <br/>
+            <label class="lbl" id="password_label" name="password_label">Password: </label>
+            <input class="nput" [(ngModel)]="LoginModel.Password" type="password" id="password_input" name="password_input"/>
+            <br/>
+            <br/>
+            <button class="btn" type="submit" id="login_button" name="login_button" (click)="LoginButtonClicked($event)">Login</button>
+            <button class="btn" type="submit" id="create_account_button" name="create_account_button">Create Account</button>
+        </div>
+    </div>
+</section>-->
 </body>
 </html>
