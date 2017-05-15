@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using Launcher.BusinessLogic.Account.Encryption;
 using Launcher.BusinessLogic.RepositoryFactory;
 using Launcher.Data.Access.Interface;
 using Launcher.Data.Access.Models;
@@ -23,24 +24,12 @@ namespace Launcher.BusinessLogic.Account.Validation
                 var account = AccountRepository.Find(accountName);
                 if (!account.Equals(null))
                 {
-                    accountValidationStatus.IsValid = account.Password.Equals(ComputePasswordHashValue(password));
+                    accountValidationStatus.IsValid = account.Password.Equals(EncrytionUtility.ComputePasswordHashValue(password));
                     accountValidationStatus.Account = account;
                 }
             }
             return accountValidationStatus;
         }
-
-        private string ComputePasswordHashValue(string password)
-        {
-            var hasBytes = MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(password));
-            StringBuilder stringBuilder =  new StringBuilder();
-
-            for (var i = 0; i < hasBytes.Length; i++)
-            {
-                stringBuilder.Append(hasBytes[i].ToString("x2"));
-            }
-
-            return stringBuilder.ToString();
-        }
+       
     }
 }

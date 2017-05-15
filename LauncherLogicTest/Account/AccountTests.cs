@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LauncherLogicTest.Account
+namespace Launcher.Business.Logic.Test.Account
 {
     [TestClass]
     public class AccountTests
