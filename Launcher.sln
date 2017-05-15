@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic.Test", "LauncherLogicTest\Launcher.BusinessLogic.Test.csproj", "{DA8AEA85-92AA-454F-8408-81B578C64A80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Business.Logic.Test", "LauncherLogicTest\Launcher.Business.Logic.Test.csproj", "{DA8AEA85-92AA-454F-8408-81B578C64A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Integration.Tests", "Launcher.Integration.Tests\Launcher.Integration.Tests.csproj", "{C9A3A3E0-4E88-4030-8164-406791A76BCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Integration.Test", "Launcher.Integration.Tests\Launcher.Integration.Test.csproj", "{C9A3A3E0-4E88-4030-8164-406791A76BCF}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Launcher.UI.Electron", "Launcher.UI.Electron\Launcher.UI.Electron.njsproj", "{EE693465-7B5C-461A-9DFC-654BE31440DB}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Data.Access", "Launcher.Data.Access\Launcher.Data.Access.csproj", "{92430F82-D3A4-4C12-BCD4-94D7430F8861}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{24411694-0CCC-4A2B-9118-6283351F137D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutomationTest", "AutomationTest", "{4EE3F39B-B06F-4BB2-83E3-3EBA4AFB5238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.UI.Test", "..\Launcher.UI.Test\Launcher.UI.Test.csproj", "{C2CC0EEF-BCAA-4675-9526-FF25100F6EE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,8 +55,17 @@ Global
 		{24411694-0CCC-4A2B-9118-6283351F137D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24411694-0CCC-4A2B-9118-6283351F137D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24411694-0CCC-4A2B-9118-6283351F137D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2CC0EEF-BCAA-4675-9526-FF25100F6EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2CC0EEF-BCAA-4675-9526-FF25100F6EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2CC0EEF-BCAA-4675-9526-FF25100F6EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2CC0EEF-BCAA-4675-9526-FF25100F6EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA8AEA85-92AA-454F-8408-81B578C64A80} = {4EE3F39B-B06F-4BB2-83E3-3EBA4AFB5238}
+		{C9A3A3E0-4E88-4030-8164-406791A76BCF} = {4EE3F39B-B06F-4BB2-83E3-3EBA4AFB5238}
+		{C2CC0EEF-BCAA-4675-9526-FF25100F6EE5} = {4EE3F39B-B06F-4BB2-83E3-3EBA4AFB5238}
 	EndGlobalSection
 EndGlobal

@@ -6,8 +6,8 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "es5",
-    "types": [],
-    "experimentalDecorators": false
+    "lib": [ "es6", "dom" ], 
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules"
