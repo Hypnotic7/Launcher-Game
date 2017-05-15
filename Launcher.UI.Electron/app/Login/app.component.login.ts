@@ -16,9 +16,9 @@ export class LoginModel {
 
 export class LoginComponent {
     LoginModel: LoginModel = new LoginModel();
-    LoginService: LoginService;
-    constructor(loginService : LoginService) {
-        this.LoginService = loginService;
+    LoginService: LoginService = new LoginService();
+    constructor() {
+        
     }
 
     LoginButtonClicked(event) {

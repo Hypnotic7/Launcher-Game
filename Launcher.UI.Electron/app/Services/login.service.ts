@@ -5,11 +5,11 @@ import { Headers, Http } from '@angular/http';
 export class LoginService {
 
     readonly url: string = "http://localhost:49455/api/Login";
-    readonly http: Http;
+    /*readonly http: Http;
 
     constructor(http: Http) {
         this.http = http;
-    }
+    }*/
 
     ValidateLogin(AccountName : string, AccountPassword : string): boolean {
         alert("start validating login");
