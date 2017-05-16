@@ -1,0 +1,13 @@
+{
+  "name": "launcher.ui.electron.test",
+  "version": "0.0.0",
+  "description": "Launcher.UI.Electron.Test",
+  "main": "app.js",
+  "author": {
+    "name": "Michal"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.1",
+    "spectron": "^3.7.0"
+  }
+}
