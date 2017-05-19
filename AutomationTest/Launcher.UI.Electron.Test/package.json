@@ -8,6 +8,6 @@
   },
   "devDependencies": {
     "mocha": "^3.4.1",
-    "spectron": "^3.7.0"
+    "spectron": "^3.7.1"
   }
 }
