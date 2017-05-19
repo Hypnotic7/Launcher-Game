@@ -11,10 +11,14 @@ html, body {
 .container-fluid {
     height: 100%;
     width: 100%;
+    position : absolute;
     margin: auto;
     background: url("https://static.pexels.com/photos/26206/pexels-photo.jpg") no-repeat 50% 50%;
     display: table;
     top: 0;
+    left: 0;
+    right : 0;
+    bottom : 0;
     background-size: cover;
 }
 
@@ -26,7 +30,6 @@ html, body {
 }
 
 .content {
-    max-width: 500px;
     margin: 0 auto;
     text-align: center;
 }
@@ -129,5 +132,5 @@ html, body {
     .btn {
         font-size: 110%;
         padding: 7px 15px;
-    }                         
+    }       
 }
