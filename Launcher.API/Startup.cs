@@ -28,7 +28,8 @@ namespace Launcher.API
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();           
+            services.AddMvc();
+            services.Configure<AppSettings>(option => Configuration.GetSection());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

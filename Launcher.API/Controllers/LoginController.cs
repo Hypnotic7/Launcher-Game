@@ -13,6 +13,12 @@ namespace Launcher.API.Controllers
     [Route("api/[controller]")]
     public class LoginController : Controller
     {
+        private AppSettings _appSettings;
+
+        public LoginController(AppSettings appSettings)
+        {
+            _appSettings = appSettings;
+        }
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -31,8 +37,7 @@ namespace Launcher.API.Controllers
         [HttpPost]
         public LoginResponse Post([FromBody]LoginRequest loginRequest)
         {
-            AccountValidation accountValidation = new AccountValidation(new RepositoryFactory<AccountEntity>(),
-                "mongodb://192.168.99.100:32768");
+            AccountValidation accountValidation = new AccountValidation(new RepositoryFactory<AccountEntity>(), _appSettings.MongoConnectionString);
             
             try
             {
