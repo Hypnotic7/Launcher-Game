@@ -7,15 +7,16 @@ using Launcher.BusinessLogic.Account.Validation;
 using Launcher.BusinessLogic.RepositoryFactory;
 using Launcher.Data.Access.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Launcher.API.Controllers
 {
     [Route("api/[controller]")]
     public class LoginController : Controller
     {
-        private AppSettings _appSettings;
+        private IOptions<AppSettings> _appSettings;
 
-        public LoginController(AppSettings appSettings)
+        public LoginController(IOptions<AppSettings> appSettings)
         {
             _appSettings = appSettings;
         }
@@ -37,7 +38,7 @@ namespace Launcher.API.Controllers
         [HttpPost]
         public LoginResponse Post([FromBody]LoginRequest loginRequest)
         {
-            AccountValidation accountValidation = new AccountValidation(new RepositoryFactory<AccountEntity>(), _appSettings.MongoConnectionString);
+            AccountValidation accountValidation = new AccountValidation(new RepositoryFactory<AccountEntity>(), _appSettings.Value.MongoConnectionString);
             
             try
             {
