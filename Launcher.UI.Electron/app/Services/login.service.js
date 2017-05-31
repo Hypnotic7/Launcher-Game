@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var LoginService = (function () {
     function LoginService() {
-        this.url = "http://localhost:49455/api/Login";
+        this.url = "http://localhost:8080/api/Login";
     }
     /*readonly http: Http;
 
