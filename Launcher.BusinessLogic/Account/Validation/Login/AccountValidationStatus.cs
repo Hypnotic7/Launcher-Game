@@ -1,6 +1,6 @@
 ﻿using Launcher.Data.Access.Models;
 
-namespace Launcher.BusinessLogic.Account.Validation
+namespace Launcher.BusinessLogic.Account.Validation.Login
 {
     public class AccountValidationStatus
     {

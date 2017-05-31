@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
 using Launcher.BusinessLogic.Account.Encryption;
 using Launcher.BusinessLogic.RepositoryFactory;
 using Launcher.Data.Access.Interface;
 using Launcher.Data.Access.Models;
 
-namespace Launcher.BusinessLogic.Account.Validation
+namespace Launcher.BusinessLogic.Account.Validation.Login
 {
     public class AccountValidation
     {

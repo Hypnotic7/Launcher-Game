@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Launcher.API.Model
+﻿namespace Launcher.API.Model.Login
 {
     public class LoginResponse
     {

@@ -1,4 +1,4 @@
-﻿namespace Launcher.API.Model
+﻿namespace Launcher.API.Model.Login
 {
     public class LoginRequest
     {
