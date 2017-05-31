@@ -15,13 +15,17 @@ var LoginModel = (function () {
 }());
 exports.LoginModel = LoginModel;
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(router, loginService) {
+        this.router = router;
+        this.loginService = loginService;
         this.LoginModel = new LoginModel();
-        this.LoginService = new login_service_1.LoginService();
     }
     LoginComponent.prototype.LoginButtonClicked = function (event) {
         alert("Account Name: " + this.LoginModel.AccountName + "\nPassword: " + this.LoginModel.Password);
-        this.LoginService.ValidateLogin(this.LoginModel.AccountName, this.LoginModel.Password);
+        this.loginService.ValidateLogin(this.LoginModel.AccountName, this.LoginModel.Password);
+    };
+    LoginComponent.prototype.CreateAccountClicked = function (event) {
+        this.router.navigate(['/CreateAccount']);
     };
     return LoginComponent;
 }());

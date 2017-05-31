@@ -11,6 +11,8 @@
             app: 'app',
             'logincomponent': 'login:app.component.login.js',
             '../Services/login.service': 'app/Services/login.service.js',
+            'createaccountcomponent': 'app.component.create.account.js',
+            '../Services/create.account.service': 'app/Services/create.account.service.js',
             // angular bundles
             '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
             '@angular/common': 'npm:@angular/common/bundles/common.umd.js',

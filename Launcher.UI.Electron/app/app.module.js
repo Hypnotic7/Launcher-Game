@@ -10,7 +10,11 @@ var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var router_1 = require("@angular/router");
+var login_service_1 = require("./Services/login.service");
+var create_account_service_1 = require("./Services/create.account.service");
 var app_component_login_1 = require("./login/app.component.login");
+var app_component_create_account_1 = require("./createaccount/app.component.create.account");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,14 +23,19 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         declarations: [
-            app_component_login_1.LoginComponent
+            app_component_login_1.LoginComponent,
+            app_component_create_account_1.CreateAccountComponent
         ],
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            router_1.RouterModule.forRoot([{ path: '', redirectTo: '/Login', pathMatch: 'full' },
+                { path: 'Login', component: app_component_login_1.LoginComponent },
+                { path: 'CreateAccount', component: app_component_create_account_1.CreateAccountComponent }
+            ])
         ],
-        providers: [],
+        providers: [login_service_1.LoginService, create_account_service_1.CreateAccountService],
         bootstrap: [app_component_login_1.LoginComponent]
     })
 ], AppModule);

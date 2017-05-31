@@ -41,6 +41,12 @@
     <Compile Include="systemjs.config.js">
       <SubType>Code</SubType>
     </Compile>
+    <Content Include="app\CreateAccount\app.component.create.account.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="app\CreateAccount\app.component.create.account.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app\Login\app_component_login.css">
       <SubType>Code</SubType>
     </Content>
@@ -59,14 +65,21 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\Login\" />
+    <Folder Include="app\CreateAccount\" />
     <Folder Include="app\Services\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\CreateAccount\app.component.create.account.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="app\Login\app.component.login.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="app\Main.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="app\Services\create.account.service.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="app\Services\login.service.ts">

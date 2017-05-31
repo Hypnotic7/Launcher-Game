@@ -1,5 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
 import { LoginService } from '../Services/login.service';
 
 export class LoginModel {
@@ -16,15 +17,18 @@ export class LoginModel {
 
 export class LoginComponent {
     LoginModel: LoginModel = new LoginModel();
-    LoginService: LoginService = new LoginService();
-    constructor() {
-        
+
+    constructor(private router : Router, private loginService: LoginService) {
     }
 
     LoginButtonClicked(event) {
         alert("Account Name: " + this.LoginModel.AccountName + "\nPassword: " + this.LoginModel.Password);
 
-        this.LoginService.ValidateLogin(this.LoginModel.AccountName, this.LoginModel.Password);
+        this.loginService.ValidateLogin(this.LoginModel.AccountName, this.LoginModel.Password);
 
+    }
+
+    CreateAccountClicked(event) {
+        this.router.navigate(['/CreateAccount']);
     }
 }

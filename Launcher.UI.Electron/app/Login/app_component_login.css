@@ -5,14 +5,6 @@
     width: 100%;
 }
 
-#title-bar {
-    -webkit-app-region: drag;
-    height: 24px;
-    width: 100%;
-    padding: 0; 
-    margin: 0; 
-}
-
 /*Container */
 
 .container-fluid {
@@ -56,6 +48,17 @@
     display: inline-block;
 }
 
+#title-bar {
+    -webkit-app-region: drag;
+    height: 24px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#close-btn, max-btn, min-btn {
+    horiz-align: right
+}
 @media screen and (max-width: 768px) {
     .content h1 {
         font-size: 250%; 
@@ -65,3 +68,7 @@
         padding: 7px 15px;
     }       
 }
+
+
+
+

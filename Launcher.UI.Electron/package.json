@@ -10,7 +10,8 @@
     "start": "tsc & concurrently \"npm run tsc:w\" \".\\node_modules\\electron\\dist\\electron .\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
-  }, "dependencies": {
+  },
+  "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",
@@ -19,12 +20,12 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
-
     "angular-in-memory-web-api": "^0.3.0",
-    "systemjs": "0.19.40",
-    "reflect-metadata": "^0.1.8",
     "core-js": "^2.4.1",
+    "glyphicons": "^0.2.0",
+    "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -33,6 +34,6 @@
     "concurrently": "^3.0.0",
     "typescript": "^2.0.3",
     "electron": "^1.4.7",
-    "promise": "7.1.1" 
+    "promise": "7.1.1"
   }
-} 
+}
