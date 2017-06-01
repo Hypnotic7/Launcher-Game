@@ -1,11 +1,11 @@
 using System;
 using Launcher.BusinessLogic.Account.Encryption;
-using Launcher.BusinessLogic.Account.Validation;
 using Launcher.BusinessLogic.RepositoryFactory;
 using Launcher.Data.Access.Interface;
 using Launcher.Data.Access.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using Launcher.BusinessLogic.Account.Validation.Login;
 
 namespace Launcher.Business.Logic.Test.Account
 {
