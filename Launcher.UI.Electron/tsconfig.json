@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "noImplicitAny": false,
-    "module": "commonjs",
-    "noEmitOnError": true,
-    "removeComments": false,
-    "sourceMap": true,
-    "target": "es5",
-    "lib": [ "es6", "dom" ], 
-    "experimentalDecorators": true
+    "module": "es2015",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise"
+    ]
   },
   "exclude": [
     "node_modules"
