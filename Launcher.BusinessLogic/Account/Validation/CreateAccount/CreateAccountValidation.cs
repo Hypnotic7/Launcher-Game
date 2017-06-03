@@ -21,31 +21,35 @@ namespace Launcher.BusinessLogic.Account.Validation.CreateAccount
 
         public CreateAccountValidationStatus CreateAccount(string accountName, string password, string email)
         {
-            CreateAccountValidationStatus createAccountValidationStatus = new CreateAccountValidationStatus {IsValid = false};
+            var createAccountValidationStatus = new CreateAccountValidationStatus {IsValid = false};
 
-            if (!accountName.Equals(String.Empty) || !password.Equals(string.Empty) || !email.Equals(string.Empty))
+            if (accountName.Equals(string.Empty)) return createAccountValidationStatus;
+            if (password.Equals(string.Empty)) return createAccountValidationStatus;
+            if (email.Equals(string.Empty))return createAccountValidationStatus;
+
+            accountName = accountName.Trim();
+            password = password.Trim();
+            email = email.Trim();
+
+            try
             {
-                try
-                {
-                    AccountRepository.Find(accountName);
-                    createAccountValidationStatus.IsValid = false;
-                    return createAccountValidationStatus;
-                }
-                catch (KeyNotFoundException)
-                {
-                    var accountId = ObjectId.GenerateNewId();
-                    AccountRepository.Add(new AccountEntity()
-                    {
-                        AccountId = accountId.ToString(),
-                        AccountName = accountName,
-                        Password = EncrytionUtility.ComputePasswordHashValue(password),
-                        Email = email
-                    });
-                    createAccountValidationStatus.IsValid = true;
-                    return createAccountValidationStatus;
-                }
+                AccountRepository.Find(accountName);
+                createAccountValidationStatus.IsValid = false;
+                return createAccountValidationStatus;
             }
-            return createAccountValidationStatus;
+            catch (KeyNotFoundException)
+            {
+                var accountId = ObjectId.GenerateNewId();
+                AccountRepository.Add(new AccountEntity()
+                {
+                    AccountId = accountId.ToString(),
+                    AccountName = accountName,
+                    Password = EncrytionUtility.ComputePasswordHashValue(password),
+                    Email = email
+                });
+                createAccountValidationStatus.IsValid = true;
+                return createAccountValidationStatus;
+            }
         }
 
     }

@@ -19,15 +19,18 @@ namespace Launcher.BusinessLogic.Account.Validation.Login
         {
             AccountValidationStatus accountValidationStatus = new AccountValidationStatus {IsValid = false};
 
-            if (!accountName.Equals(string.Empty) || password.Equals(string.Empty))
-            {
-                var account = AccountRepository.Find(accountName);
-                if (!account.Equals(null))
-                {
-                    accountValidationStatus.IsValid = account.Password.Equals(EncrytionUtility.ComputePasswordHashValue(password));
-                    accountValidationStatus.Account = account;
-                }
-            }
+            if (accountName.Equals(string.Empty)) return accountValidationStatus;
+            if (password.Equals(string.Empty)) return accountValidationStatus;
+
+            accountName = accountName.Trim();
+            password = password.Trim();
+
+            var account = AccountRepository.Find(accountName);
+
+            if (account.Equals(null)) return accountValidationStatus;
+
+            accountValidationStatus.IsValid = account.Password.Equals(EncrytionUtility.ComputePasswordHashValue(password));
+            accountValidationStatus.Account = account;
             return accountValidationStatus;
         }
        
