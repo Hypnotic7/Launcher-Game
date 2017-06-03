@@ -10,7 +10,7 @@ namespace Launcher.Data.Access.Repository.MongoRepository
     public class AccountRepositoryMongo : MongoRepository, IDataAccess<AccountEntity>
     {
         public string CollectionName => "Accounts";
-        public static readonly Func<string, AccountRepositoryMongo> CreateAccountRepository = c => { return new AccountRepositoryMongo(new MongoClient(c)); };
+        public static readonly Func<string, AccountRepositoryMongo> CreateAccountRepository = c => new AccountRepositoryMongo(new MongoClient(c));
 
         private AccountRepositoryMongo(IMongoClient mongoClient) : base(mongoClient)
         {
@@ -19,7 +19,8 @@ namespace Launcher.Data.Access.Repository.MongoRepository
         
         public void Add(AccountEntity entity)
         {
-            
+            var collection = Connect(DataAccessConstants.DatabaseName).GetCollection<AccountEntity>(CollectionName);
+            collection.InsertOne(entity);
         }
         public void Remove(AccountEntity entity)
         {
@@ -31,17 +32,15 @@ namespace Launcher.Data.Access.Repository.MongoRepository
             
         }
 
-        public AccountEntity Find(string accountName)
+       public AccountEntity Find(string accountName)
         {
-            var collection = this.Connect(DataAccessConstants.DatabaseName).GetCollection<AccountEntity>(CollectionName);
+            var collection = Connect(DataAccessConstants.DatabaseName).GetCollection<AccountEntity>(CollectionName);
             var account = collection.Find(f => f.AccountName.Equals(accountName)).FirstOrDefault();
 
             if (account != null)
-             return new AccountEntity() { AccountID = account.AccountID, AccountName = account.AccountName, Password = account.Password, Email = account.Email};
+             return new AccountEntity() { AccountId = account.AccountId, AccountName = account.AccountName, Password = account.Password, Email = account.Email};
 
             throw new KeyNotFoundException($"Account Name not found: {accountName}");
         }
-
-        
     }
 }
