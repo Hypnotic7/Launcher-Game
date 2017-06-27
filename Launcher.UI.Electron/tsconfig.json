@@ -1,14 +1,18 @@
-{
+﻿{
   "compilerOptions": {
-    "module": "es2015",
+    "noImplicitAny": false,
+    "module": "es6",
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "allowJs": true,
+    "target": "es6",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "dom",
-      "es5",
-      "es2015.promise"
-    ]
+    "experimentalDecorators": true,
+    "lib": ["dom","es2015", "es2015.promise"]
   },
+  "include": ["./src/**/*.ts"],
   "exclude": [
     "node_modules"
   ]
