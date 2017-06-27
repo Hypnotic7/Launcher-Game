@@ -21,20 +21,27 @@
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'vue-class-component'
+  declare const window: any;
+  const electron = window.require('electron');
+  const app = electron.app;
+  const BrowserWindow = electron.BrowserWindow;
+  const path = window.require('path');
 
   @Component
   export default class App extends Vue{
 
     Minimize(): void {
-
+      electron.remote.getCurrentWindow().minimize();
     }
 
     Maximize(): void {
+      electron.remote.getCurrentWindow().maximize();
 
     }
 
     Close(): void {
- 
+      electron.remote.getCurrentWindow().close();
+
     }
 }
 </script>
