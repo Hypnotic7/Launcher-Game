@@ -1,39 +1,71 @@
 {
   "name": "launcher.ui.electron",
-  "version": "0.1.0",
-  "description": "Launcher.UI.Electron",
-  "main": "app.js",
-  "author": {
-    "name": "Michal_Wrzosek"
-  },
+  "version": "1.0.0",
+  "description": "launcher ui",
+  "author": "Michal Wrzosek",
+  "private": true,
   "scripts": {
-    "start": "tsc & concurrently \"npm run tsc:w\" \".\\node_modules\\electron\\dist\\electron .\" ",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "dev": "node build/dev-server.js",
+    "start": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "electron": ".\\node_modules\\.bin\\electron main.ts",
+    "launch": "npm run build & npm run electron"
   },
   "dependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/router": "^4.0.0",
-    "angular-in-memory-web-api": "^0.3.0",
-    "core-js": "^2.4.1",
-    "glyphicons": "^0.2.0",
-    "reflect-metadata": "^0.1.8",
-    "rxjs": "5.0.1",
-    "systemjs": "0.19.40",
-    "zone.js": "^0.8.4"
+    "electron": "^1.7.2",
+    "fs": "0.0.1-security",
+    "remote": "^0.2.6",
+    "vue": "^2.3.3",
+    "vue-router": "^2.3.1"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.34",
-    "@types/node": "^6.0.45",
-    "concurrently": "^3.0.0",
-    "typescript": "^2.0.3",
-    "electron": "^1.4.7",
-    "promise": "7.1.1"
-  }
+    "autoprefixer": "^6.7.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "chalk": "^1.1.3",
+    "connect-history-api-fallback": "^1.3.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.0",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.14.1",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.11.1",
+    "friendly-errors-webpack-plugin": "^1.1.3",
+    "html-webpack-plugin": "^2.28.0",
+    "http-proxy-middleware": "^0.17.3",
+    "webpack-bundle-analyzer": "^2.2.1",
+    "semver": "^5.3.0",
+    "shelljs": "^0.7.6",
+    "opn": "^4.0.2",
+    "optimize-css-assets-webpack-plugin": "^1.3.0",
+    "ora": "^1.2.0",
+    "rimraf": "^2.6.0",
+    "url-loader": "^0.5.8",
+    "vue-loader": "^12.1.0",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "^2.6.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-hot-middleware": "^2.18.0",
+    "webpack-merge": "^4.1.0",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.4",
+    "vue-class-component": "^5.0.1",
+    "inversify": "4.1.1",
+    "reflect-metadata": "0.1.10",
+    "concurrently": "^3.0.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
