@@ -12,8 +12,11 @@
     "launch": "npm run build & npm run electron"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "electron": "^1.7.2",
     "fs": "0.0.1-security",
+    "glyphicons": "^0.2.0",
+    "glyphicons-css": "^1.1.0",
     "remote": "^0.2.6",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1"

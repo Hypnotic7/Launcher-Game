@@ -1,17 +1,24 @@
 ﻿<template>
   <div id="app"> 
     <div class="container-fluid">
-      <div id="title-bar"></div>      
+      <div id="title-bar"></div>  
+      
       <div id="title-bar-btns">
-        <button id="min-btn" class="btn btn-default btn-md" v-on:click="Minimize">
-          <span class="glyphicon glyphicon-minus" aria-hidden="true">-</span>
-        </button>
-        <button id="max-btn" class="btn btn-default btn-md" v-on:click="Maximize">
-          <span class="glyphicon glyphicon-fullscreen" aria-hidden="true">o</span>
-        </button>
-        <button id="close-btn" class="btn btn-default btn-md" v-on:click="Close">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true">x</span>
-        </button>
+        <div class="row">
+          <div class="col-md-7"></div>
+          <div class="col-md-5">
+            <button type="button" id="close-btn" class="btn btn-primary btn-lg" v-on:click="Close">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="max-btn" class="btn btn-primary btn-lg" v-on:click="Maximize">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </button>
+            <button type="button" id="min-btn" class="btn btn-primary btn-lg" v-on:click="Minimize">
+              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+          </div>
+          
+        </div>
       </div>
       <router-view></router-view>
       </div>
@@ -21,11 +28,9 @@
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'vue-class-component'
+
   declare const window: any;
   const electron = window.require('electron');
-  const app = electron.app;
-  const BrowserWindow = electron.BrowserWindow;
-  const path = window.require('path');
 
   @Component
   export default class App extends Vue{
