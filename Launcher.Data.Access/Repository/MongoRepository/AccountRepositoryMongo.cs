@@ -29,7 +29,8 @@ namespace Launcher.Data.Access.Repository.MongoRepository
 
         public void Modify(AccountEntity entity)
         {
-            
+            var collection = Connect(DataAccessConstants.DatabaseName).GetCollection<AccountEntity>(CollectionName);
+            collection.ReplaceOne(f => f.AccountName.Equals(entity.AccountName), entity);
         }
 
        public AccountEntity Find(string accountName)

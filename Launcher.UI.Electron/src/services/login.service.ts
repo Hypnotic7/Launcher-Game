@@ -8,7 +8,7 @@ export interface ILoginService {
 @injectable()
 export class LoginService implements ILoginService {
 
-  readonly url: string = "http://localhost:8080/api/Login";
+  readonly url: string = "http://localhost:49456/api/Login";
 
   validateLogin(accountName: string, accountPassword: string): boolean {
     alert("start validating login");
@@ -18,9 +18,12 @@ export class LoginService implements ILoginService {
     xHttpRequest.send(JSON.stringify({ accountName : accountName, accountPassword : accountPassword}));
 
     var response = xHttpRequest.responseText;
-        
+
     console.log(response);
-    return true;
+    if (response.search("true") === -1) {
+        return false;
+    }
+    return true;    
   }
     
 }

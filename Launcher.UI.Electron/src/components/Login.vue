@@ -67,7 +67,15 @@
 
     OnLoginClicked(): void {
       alert("Account Name: " + this.loginModel.AccountName + "\nPassword: " + this.loginModel.Password);
-      this.loginService.validateLogin(this.loginModel.AccountName, this.loginModel.Password);
+      var isValid = this.loginService.validateLogin(this.loginModel.AccountName, this.loginModel.Password);
+
+      if (isValid) {
+        this.$router.push('/MainMenu');
+      }
+      else {
+        console.log("PRRST");
+      }
+      
     }
 
     OnCreateAccountClicked(): void {

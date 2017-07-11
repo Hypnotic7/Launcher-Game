@@ -2,6 +2,7 @@
 import Router, { RouterOptions } from 'vue-router'
 import LoginComponent from '../components/Login.vue'
 import CreateAccountComponent from '../components/Account.vue'
+import MainMenuComponent from '../components/MainMenu.vue'
 
 const routerOpt = <RouterOptions>{
     routes: [
@@ -14,6 +15,11 @@ const routerOpt = <RouterOptions>{
             path: '/CreateAccount',
             name: 'createAccount',
             component: CreateAccountComponent
+        },
+        {
+            path: '/MainMenu',
+            name: 'mainMenu',
+            component: MainMenuComponent
         }
     ]
 };

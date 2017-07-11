@@ -14,7 +14,7 @@
               <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
             </button>
             <button type="button" id="min-btn" class="btn btn-primary btn-lg" v-on:click="Minimize">
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
             </button>
           </div>
           

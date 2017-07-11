@@ -11,5 +11,6 @@ namespace Launcher.Data.Access.Models
         public string AccountName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public bool IsLoggedIn { get; set; }
     }
 }

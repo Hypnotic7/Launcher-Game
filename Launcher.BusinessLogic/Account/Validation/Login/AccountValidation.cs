@@ -30,6 +30,12 @@ namespace Launcher.BusinessLogic.Account.Validation.Login
             if (account.Equals(null)) return accountValidationStatus;
 
             accountValidationStatus.IsValid = account.Password.Equals(EncrytionUtility.ComputePasswordHashValue(password));
+
+            if (accountValidationStatus.IsValid)
+            {
+                account.IsLoggedIn = true;
+                AccountRepository.Modify(account);
+            }
             accountValidationStatus.Account = account;
             return accountValidationStatus;
         }
