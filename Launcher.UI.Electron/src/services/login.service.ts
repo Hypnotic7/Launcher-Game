@@ -15,7 +15,11 @@ export class LoginService implements ILoginService {
     var xHttpRequest: XMLHttpRequest = new XMLHttpRequest();
     xHttpRequest.open("POST", this.url, false);
     xHttpRequest.setRequestHeader("Content-type", "application/json");
-    xHttpRequest.send(JSON.stringify({ accountName : accountName, accountPassword : accountPassword}));
+
+    xHttpRequest.send(JSON.stringify({
+      accountName: accountName.toLocaleLowerCase(),
+      accountPassword: accountPassword
+    }));
 
     var response = xHttpRequest.responseText;
 

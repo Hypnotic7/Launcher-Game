@@ -1,8 +1,8 @@
 ﻿<template>
-  <div id="app"> 
+  <div id="app">
     <div class="container-fluid">
-      <div id="title-bar"></div>  
-      
+      <div id="title-bar"></div>
+
       <div id="title-bar-btns">
         <div class="row">
           <div class="col-md-7"></div>
@@ -17,12 +17,15 @@
               <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
             </button>
           </div>
-          
+
         </div>
       </div>
       <router-view></router-view>
-      </div>
-    </div>
+    </div>  
+  </div>
+      
+      
+    
 </template>
 
 <script lang="ts">

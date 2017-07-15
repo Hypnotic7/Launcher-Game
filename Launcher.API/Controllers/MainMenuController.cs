@@ -1,5 +1,4 @@
 ﻿using Launcher.API.Model.MainMenu;
-using Launcher.BusinessLogic.Account.Validation.Logout;
 using Launcher.BusinessLogic.RepositoryFactory;
 using Launcher.Data.Access.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -37,27 +36,9 @@ namespace Launcher.API.Controllers
 
         // POST api/values
         [HttpPost]
-        public MainMenuLogoutResponse Post([FromBody]MainMenuLogoutRequest logoutRequest)
+        public int Post([FromBody]int logoutRequest)
         {
-            AccountLogoutValidation accountLogoutValidation = new AccountLogoutValidation(new RepositoryFactory<AccountEntity>(),_appSettings.Value.MongoConnectionString);
-            try
-            {
-                var accountLogoutStatus = accountLogoutValidation.Logout(logoutRequest.AccountName);
-                var returnMessage = accountLogoutStatus.LoggedOut ? $@"{logoutRequest.AccountName} has been logged out" : $@"{logoutRequest.AccountName} have not logged out";
-                return new MainMenuLogoutResponse
-                {
-                    IsValid = accountLogoutStatus.LoggedOut,
-                    Message = returnMessage
-                };
-            }
-            catch (KeyNotFoundException keyNotFound)
-            {
-                return new MainMenuLogoutResponse()
-                {
-                    IsValid = false,
-                    Message = keyNotFound.Message
-                };
-            }
+            return 0;
         }
 
         // PUT api/values/5

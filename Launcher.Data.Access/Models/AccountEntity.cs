@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Launcher.Data.Access.Models
@@ -11,6 +12,9 @@ namespace Launcher.Data.Access.Models
         public string AccountName { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+
         public bool IsLoggedIn { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        public DateTime LastLoginDate { get; set; }
     }
 }

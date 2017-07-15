@@ -71,6 +71,7 @@
 
       if (isValid) {
         this.$router.push('/MainMenu');
+        
       }
       else {
         console.log("PRRST");

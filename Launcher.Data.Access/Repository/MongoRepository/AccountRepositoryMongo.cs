@@ -39,7 +39,12 @@ namespace Launcher.Data.Access.Repository.MongoRepository
             var account = collection.Find(f => f.AccountName.Equals(accountName)).FirstOrDefault();
 
             if (account != null)
-             return new AccountEntity() { AccountId = account.AccountId, AccountName = account.AccountName, Password = account.Password, Email = account.Email};
+             return new AccountEntity() { AccountId = account.AccountId,
+                                          AccountName = account.AccountName,
+                                          Password = account.Password,
+                                          Email = account.Email,
+                                          IsLoggedIn = account.IsLoggedIn,
+                                          LastLoginDate = account.LastLoginDate};
 
             throw new KeyNotFoundException($"Account Name not found: {accountName}");
         }

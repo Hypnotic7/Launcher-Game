@@ -40,12 +40,16 @@ namespace Launcher.BusinessLogic.Account.Validation.CreateAccount
             catch (KeyNotFoundException)
             {
                 var accountId = ObjectId.GenerateNewId();
+                var isLoggedIn = false;
+                var lastLoginDate = DateTime.Now;
                 AccountRepository.Add(new AccountEntity()
                 {
                     AccountId = accountId.ToString(),
                     AccountName = accountName,
                     Password = EncrytionUtility.ComputePasswordHashValue(password),
-                    Email = email
+                    Email = email,
+                    IsLoggedIn = isLoggedIn,
+                    LastLoginDate = lastLoginDate
                 });
                 createAccountValidationStatus.IsValid = true;
                 return createAccountValidationStatus;

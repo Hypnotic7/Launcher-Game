@@ -46,13 +46,9 @@ namespace Launcher.API.Controllers
             if (createAccountValidationStatus.IsValid)
                 return new CreateAccountResponse
                 {
-                    IsValid = true,
-                    Message =
-                        createAccountValidation.ValidateAccount(createAccountRequest.AccountName,
-                                createAccountRequest.AccountPassword)
-                            .IsValid
-                            ? $@"{createAccountRequest.AccountName} has been created"
-                            : $@"{createAccountRequest.AccountName} Already exists in Database"
+                    IsValid = createAccountValidationStatus.IsValid,
+                    Message = createAccountValidationStatus.IsValid ?  $@"{createAccountRequest.AccountName} has been created"
+                                                                    :  $@"{createAccountRequest.AccountName} Already exists in Database"
                 };
 
             return new CreateAccountResponse

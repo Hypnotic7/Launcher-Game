@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-7" id="heading_title">
-        <h3 class="form-signin-heading" name="heading title">Create Account</h3>
+        <h3 class="form-signin-heading" name="heading title" color="black">Create Account</h3>
       </div>
       <div class="col-md-2"></div>
     </div>
@@ -110,8 +110,9 @@
     display: block;
     font-size: 24px;
     padding-top: .33em;
-    color: white;
+    color: black;
     text-align: right;
+    border: 10px;
   }
 
   #email_input, #retype_password_input {
@@ -179,7 +180,7 @@
     outline: none;
     border: 0;
     background: transparent;
-    color: white;
+    color: black;
   }
 
 </style>

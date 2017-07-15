@@ -28,15 +28,20 @@ namespace Launcher.BusinessLogic.Account.Validation.Login
             var account = AccountRepository.Find(accountName);
 
             if (account.Equals(null)) return accountValidationStatus;
-
+            
             accountValidationStatus.IsValid = account.Password.Equals(EncrytionUtility.ComputePasswordHashValue(password));
 
             if (accountValidationStatus.IsValid)
             {
-                account.IsLoggedIn = true;
+                account.IsLoggedIn = !account.IsLoggedIn;
+                account.LastLoginDate = DateTime.Now;
                 AccountRepository.Modify(account);
             }
+
+            
+
             accountValidationStatus.Account = account;
+
             return accountValidationStatus;
         }
        

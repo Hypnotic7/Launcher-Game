@@ -24,7 +24,6 @@ namespace Launcher.Data.Access.Repository.MongoRepository
 
             return _MongoDatabase.GetCollection<T>(collection);
         }
-
         
 
     }
