@@ -1,5 +1,4 @@
-﻿using Launcher.API.Model.MainMenu;
-using Launcher.BusinessLogic.RepositoryFactory;
+﻿using Launcher.BusinessLogic.RepositoryFactory;
 using Launcher.Data.Access.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

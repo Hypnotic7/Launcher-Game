@@ -2,6 +2,7 @@
 import "reflect-metadata";
 
 export interface IMainMenuService {
+
 }
 
 

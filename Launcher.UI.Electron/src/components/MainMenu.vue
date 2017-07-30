@@ -35,7 +35,7 @@
         </router-link>
 
 
-        <router-link :to="{name:'createAccount'}" tag="button" class="btn btn-lg btn-primary btn-block" id="games_button" name="games_button">
+        <router-link :to="{name:'games'}" tag="button" class="btn btn-lg btn-primary btn-block" id="games_button" name="games_button">
           <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
         </router-link>
         

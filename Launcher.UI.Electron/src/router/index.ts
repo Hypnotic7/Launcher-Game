@@ -3,6 +3,7 @@ import Router, { RouterOptions } from 'vue-router'
 import LoginComponent from '../components/Login.vue'
 import CreateAccountComponent from '../components/Account.vue'
 import MainMenuComponent from '../components/MainMenu.vue'
+import GamesComponent from '../components/Games.vue'
 
 const routerOpt = <RouterOptions>{
     routes: [
@@ -20,6 +21,11 @@ const routerOpt = <RouterOptions>{
             path: '/MainMenu',
             name: 'mainMenu',
             component: MainMenuComponent
+        },
+        {
+          path: '/Games',
+          name: 'games',
+          component: GamesComponent
         }
     ]
 };
