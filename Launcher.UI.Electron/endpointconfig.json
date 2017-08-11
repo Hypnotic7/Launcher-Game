@@ -1,0 +1,6 @@
+﻿{
+  "ApiEndpoints": {
+    "LoginEndpoint": "http://localhost:8080/api/Login",
+    "CreateAccountEndpoint": "http://localhost:8080/api/CreateAccount"
+  } 
+}

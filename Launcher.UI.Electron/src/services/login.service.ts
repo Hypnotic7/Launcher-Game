@@ -1,5 +1,6 @@
 ﻿import { injectable, inject } from 'inversify';
 import "reflect-metadata";
+const config = require('../../endpointconfig.json');
 
 export interface ILoginService {
   validateLogin(accountName: string, accountPassword: string) : boolean
@@ -8,7 +9,7 @@ export interface ILoginService {
 @injectable()
 export class LoginService implements ILoginService {
 
-  readonly url: string = "http://localhost:49456/api/Login";
+  private url: string = config.ApiEndpoints.LoginEndpoint;
 
   validateLogin(accountName: string, accountPassword: string): boolean {
     alert("start validating login");

@@ -1,5 +1,6 @@
 ﻿import { injectable, inject } from 'inversify';
 import "reflect-metadata";
+const config = require('../../endpointconfig.json');
 
 export interface ICreateAccount {
     createAccount(email: string, accountName: string, accountPassword: string, accountRetypePassword: string): boolean;
@@ -8,8 +9,7 @@ export interface ICreateAccount {
 @injectable()
 export class CreateAccountService implements ICreateAccount {
 
-    readonly url: string = "http://localhost:49456/api/CreateAccount"; 
-
+  private url: string = config.ApiEndpoints.CreateAccountEndpoint; 
 
     createAccount(email: string, accountName: string, accountPassword: string, accountRetypePassword: string): boolean {
         alert("Creating account");

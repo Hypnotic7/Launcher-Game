@@ -3,7 +3,7 @@ import {  ILoginService, LoginService } from "./services/login.service";
 import { ICreateAccount, CreateAccountService } from './services/create.account.service'
 import { IMainMenuService, MainMenuService } from './services/main.menu.service'
 import { IGamesService, GamesService } from './services/games.service'
-import {TYPES} from "./RegitredTypes"
+import { TYPES } from "./RegitredTypes"
 
 var iocContainer = new Container();
 iocContainer.bind<ILoginService>(TYPES.ILoginService).to(LoginService);
