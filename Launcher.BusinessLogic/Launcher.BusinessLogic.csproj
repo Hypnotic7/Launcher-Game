@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Launcher.Data.Access\Launcher.Data.Access.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Education\" />
+  </ItemGroup>
+
 </Project>

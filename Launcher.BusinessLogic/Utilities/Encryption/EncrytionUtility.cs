@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Launcher.BusinessLogic.Account.Encryption
+namespace Launcher.BusinessLogic.Utilities.Encryption
 {
     public class EncrytionUtility
     {

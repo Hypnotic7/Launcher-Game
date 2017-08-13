@@ -1,12 +1,12 @@
 ﻿<template>
   <div class="login-component">
-      <form class="form-signin">
+      <form class="form-signin">   
         <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6" id="heading_title">
-            <h1 class="form-signin-heading" name="heading title">MVProduction</h1>
+          <div class="col-md-2"></div>
+          <div class="col-md-8" id="heading_title">
+            <h3 class="form-signin-heading" name="heading title">MVProduction</h3>
           </div>
-          <div class="col-md-3"></div>
+          <div class="col-md-2"></div>
         </div>
         <div class="row">
           <div class="col-md-1"></div>
@@ -65,6 +65,7 @@
     loginModel: LoginModel = new LoginModel();
     loginService: ILoginService = iocContainer.get<ILoginService>(TYPES.ILoginService);
 
+   
     OnLoginClicked(): void {
       alert("Account Name: " + this.loginModel.AccountName + "\nPassword: " + this.loginModel.Password);
       var isValid = this.loginService.validateLogin(this.loginModel.AccountName, this.loginModel.Password);
@@ -104,7 +105,7 @@
     width: 100%;
     position: absolute;
     margin: auto;
-    background: url("https://phoenixrp.co.uk/uploads/monthly_2016_10/logo-88-msi-dragon-burning.jpg.ca99700717b3e62bd5f59c3581ffa3fc.jpg") no-repeat 50% 50%;
+    background: url("http://www.hdwallpaperspulse.com/wp-content/uploads/2017/04/11/navy-blue-wallpaper-for-desktop.jpg") no-repeat 50% 50%;
     display: table;
     top: 0;
     left: 0;
@@ -116,7 +117,7 @@
   /*Title Bar*/
   #title-bar {
     -webkit-app-region: drag;
-    height: 24px;
+    height: 25px;
     padding: 0;
     margin: 0;
   }
@@ -124,10 +125,9 @@
   /*Header Title*/
 
   .form-signin-heading {
-    height: 2.8em;
+    height: 2.3em;
     display: flex;
-    padding-top: .75em;
-    text-align:center;
+    text-align: center;
     color: white;
     font-family: 'Urban Brush Zone';
     font-size: 100px;
@@ -242,7 +242,7 @@
   .row {
     margin: 0;
     padding: 0;
-    padding-bottom: 1.25em;
+    padding-bottom: 0.5em;
     display: flex;
   }
 
@@ -251,7 +251,6 @@
     padding: 0;
     display: block;
     font-size: 24px;
-    padding-top: .33em;
     color: white;
     text-align:right;
   }
@@ -287,12 +286,12 @@
     width: 150px;
     height: 30px;
     cursor: pointer;
-    margin: 0 auto;
-    margin-top: 2em;
+    margin-top: 1em;
+    margin-left: 4em;
     border: 2px solid rgba(255,255,255,1);
-    -webkit-border-radius: 40px;
-    border-radius: 40px;
-    font: normal 24px "Advent Pro", Helvetica, sans-serif;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    font: normal 20px "Advent Pro", Helvetica, sans-serif;
     color: rgba(255,255,255,1);
     text-align: center;
     -o-text-overflow: clip;
@@ -303,7 +302,7 @@
     -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
     -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
     transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
-    }
+  }
 
   #login_button:hover {
     background: rgba(255,255,255,1);
@@ -320,16 +319,16 @@
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    width: 200px;
+    width: 150px;
     height: 30px;
     cursor: pointer;
     margin: 0 auto;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-left: 3em;
     border: 2px solid rgba(255,255,255,1);
     -webkit-border-radius: 40px;
     border-radius: 40px;
-    font: normal 24px "Advent Pro", Helvetica, sans-serif;
+    font: normal 20px "Advent Pro", Helvetica, sans-serif;
     color: rgba(255,255,255,1);
     text-align: center;
     -o-text-overflow: clip;

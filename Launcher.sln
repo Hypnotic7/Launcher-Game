@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.API", "Launcher.API\Launcher.API.csproj", "{77297C76-3ECD-4EE6-BA13-724FED9D781C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Launcher.API", "Launcher.API\Launcher.API.csproj", "{77297C76-3ECD-4EE6-BA13-724FED9D781C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.BusinessLogic", "Launcher.BusinessLogic\Launcher.BusinessLogic.csproj", "{C7B1F144-9A8F-4954-8DB3-9DD623053915}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Launcher.BusinessLogic", "Launcher.BusinessLogic\Launcher.BusinessLogic.csproj", "{C7B1F144-9A8F-4954-8DB3-9DD623053915}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Data.Access", "Launcher.Data.Access\Launcher.Data.Access.csproj", "{92430F82-D3A4-4C12-BCD4-94D7430F8861}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Launcher.Data.Access", "Launcher.Data.Access\Launcher.Data.Access.csproj", "{92430F82-D3A4-4C12-BCD4-94D7430F8861}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{24411694-0CCC-4A2B-9118-6283351F137D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutomationTest", "AutomationTest", "{4EE3F39B-B06F-4BB2-83E3-3EBA4AFB5238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher.Business.Logic.Test", "AutomationTest\Launcher.Business.Logic.Test\Launcher.Business.Logic.Test.csproj", "{64FA36B0-8F5F-48E2-B7B7-7DAB168613F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Launcher.Business.Logic.Test", "AutomationTest\Launcher.Business.Logic.Test\Launcher.Business.Logic.Test.csproj", "{64FA36B0-8F5F-48E2-B7B7-7DAB168613F3}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Launcher.UI.Electron.Test", "AutomationTest\Launcher.UI.Electron.Test\Launcher.UI.Electron.Test.njsproj", "{DFAA2634-6697-4325-A6E2-EF3EB45B7029}"
 EndProject

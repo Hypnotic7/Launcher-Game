@@ -1,8 +1,7 @@
 ﻿let TYPES = {
   ILoginService: "ILoginService",
   ICreateAccount: "ICreateAccount",
-  IMainMenuService: "IMainMenuService",
-  IGamesService: "IGamesService"
+  IMainMenuService: "IMainMenuService"
 };
 
 export { TYPES };

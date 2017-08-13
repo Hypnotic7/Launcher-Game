@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Launcher.BusinessLogic.Account.Encryption;
 using Launcher.BusinessLogic.Account.Validation.Login;
 using Launcher.BusinessLogic.RepositoryFactory;
+using Launcher.BusinessLogic.Utilities.Encryption;
 using Launcher.Data.Access.Interface;
 using Launcher.Data.Access.Models;
 using MongoDB.Bson;
@@ -12,7 +12,7 @@ namespace Launcher.BusinessLogic.Account.Validation.CreateAccount
 {
     public class CreateAccountValidation : AccountValidation
     {
-        public new IDataAccess<AccountEntity> AccountRepository { get; private set; }
+        public new IDataAccess<AccountEntity> AccountRepository { get; }
 
         public CreateAccountValidation(IRepositoryFactory<AccountEntity> accountFactory, string connectionString) : base(accountFactory,connectionString)
         {

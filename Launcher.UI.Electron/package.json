@@ -12,7 +12,7 @@
     "package": "asar pack MVLauncher-win32-x64/resources/app MVLauncher-win32-x64/resources/app.asar & rm -r .\\MVLauncher-win32-x64\\resources\\app",
     "build-dev": "node build/build.js",
     "electron": ".\\node_modules\\.bin\\electron main.ts",
-    "launch": "npm run build-dev & npm run electron"
+    "MVLauncher-Dev": "npm run build-dev & npm run electron"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",

@@ -1,6 +1,6 @@
 ﻿using System;
-using Launcher.BusinessLogic.Account.Encryption;
 using Launcher.BusinessLogic.RepositoryFactory;
+using Launcher.BusinessLogic.Utilities.Encryption;
 using Launcher.Data.Access.Interface;
 using Launcher.Data.Access.Models;
 
@@ -8,7 +8,7 @@ namespace Launcher.BusinessLogic.Account.Validation.Login
 {
     public class AccountValidation
     {
-        public IDataAccess<AccountEntity> AccountRepository { get; private set; }
+        public IDataAccess<AccountEntity> AccountRepository { get; }
 
         public AccountValidation(IRepositoryFactory<AccountEntity> accountFactory, string connectionString)
         {
@@ -17,7 +17,7 @@ namespace Launcher.BusinessLogic.Account.Validation.Login
 
         public AccountValidationStatus ValidateAccount(string accountName,string password)
         {
-            AccountValidationStatus accountValidationStatus = new AccountValidationStatus {IsValid = false};
+            var accountValidationStatus = new AccountValidationStatus {IsValid = false};
 
             if (accountName.Equals(string.Empty)) return accountValidationStatus;
             if (password.Equals(string.Empty)) return accountValidationStatus;
@@ -37,8 +37,6 @@ namespace Launcher.BusinessLogic.Account.Validation.Login
                 account.LastLoginDate = DateTime.Now;
                 AccountRepository.Modify(account);
             }
-
-            
 
             accountValidationStatus.Account = account;
 

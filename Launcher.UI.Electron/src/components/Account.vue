@@ -3,10 +3,10 @@
 
     <div class="row">
       <div class="col-md-3"></div>
-      <div class="col-md-7" id="heading_title">
-        <h3 class="form-signin-heading" name="heading title" color="black">Create Account</h3>
+      <div class="col-md-8" id="heading_title">
+        <h4 class="form-createaccount-heading" name="heading title" color="black">Create Account</h4>
       </div>
-      <div class="col-md-2"></div>
+      <div class="col-md-1"></div>
     </div>
 
     <div class="row">
@@ -104,13 +104,23 @@
 
 <style>
 
+  .form-createaccount-heading {
+    height: 2.3em;
+    display: flex;
+    text-align: center;
+    color: white;
+    font-family: 'Urban Brush Zone';
+    font-size: 75px;
+    margin: 0 auto;
+  }
+
   #email_label {
     margin: 0;
     padding: 0;
     display: block;
     font-size: 24px;
     padding-top: .33em;
-    color: black;
+    color: white;
     text-align: right;
     border: 10px;
   }
@@ -180,7 +190,7 @@
     outline: none;
     border: 0;
     background: transparent;
-    color: black;
+    color: white;
   }
 
 </style>

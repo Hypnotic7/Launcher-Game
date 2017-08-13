@@ -8,8 +8,8 @@ let win = null;
 
 let createWindow = () => {
     win = new BrowserWindow({
-        height: 800,
-        width: 1300,        
+        height: 600,
+        width: 1000,        
         frame: false
     });
   win.loadURL(url.format({

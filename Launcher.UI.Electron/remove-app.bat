@@ -1,0 +1,1 @@
+rm -r .\MVLauncher-win32-x64\resources\app

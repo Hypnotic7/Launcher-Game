@@ -2,6 +2,7 @@
   <div id="app">
     <div class="container-fluid">
       <div id="title-bar"></div>
+
       <div id="title-bar-btns">
         <div class="row">
           <div class="col-md-7"></div>
@@ -21,7 +22,10 @@
       </div>
       <router-view></router-view>
     </div>  
-  </div>   
+  </div>
+      
+      
+    
 </template>
 
 <script lang="ts">
