@@ -1,6 +1,6 @@
 {
   "name": "launcher.ui.electron",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "launcher ui",
   "author": "Michal Wrzosek",
   "private": true,
@@ -9,7 +9,7 @@
     "dev": "node build/dev-server.js",
     "start": "electron .",
     "build": "electron-packager . MVLauncher --ignore=node_modules/electron-* & npm run package",
-    "package": "asar pack MVLauncher-win32-x64/resources/app MVLauncher-win32-x64/resources/app.asar & rm -r .\\MVLauncher-win32-x64\\resources\\app",
+    "package": "asar pack MVLauncher-win32-x64/resources/app MVLauncher-win32-x64/resources/app.asar",
     "build-dev": "node build/build.js",
     "electron": ".\\node_modules\\.bin\\electron main.ts",
     "MVLauncher-Dev": "npm run build-dev & npm run electron"

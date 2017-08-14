@@ -83,7 +83,9 @@
     import Vue from 'vue'
     import Component from 'vue-class-component'
     import { GameService } from '../services/game.service';
+    import { ILoginService } from '../services/login.service'
     import { iocContainer } from '../inversify.config'
+    import { TYPES } from '../RegitredTypes'
 
     interface IGameComponent {
       OnGameClicked(gameTitle: string): void;
@@ -101,6 +103,8 @@
       gameModel: GameModel = new GameModel();
       gameService: GameService = new GameService();
 
+      loginService: ILoginService = iocContainer.get<ILoginService>(TYPES.ILoginService);
+
       OnGameClicked(gameTitle: string): void {
 
       }
@@ -110,7 +114,14 @@
       }
 
       OnLogoutClicked(): void {
+        alert("Logging out");
+        var loggedOut = this.loginService.validateLogin("test", "test");
 
+        if (loggedOut) {
+          this.$router.push('/');
+        } else {
+          console.log("Could not log out")
+        }
       }
 
     }

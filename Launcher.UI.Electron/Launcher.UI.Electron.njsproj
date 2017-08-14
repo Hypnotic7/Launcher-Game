@@ -22,6 +22,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="index.html" />
+    <Content Include="MVLauncher_Packager.ps1" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include=".postcssrc.js" />
