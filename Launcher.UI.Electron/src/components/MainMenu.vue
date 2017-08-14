@@ -12,7 +12,7 @@
           </div>
           <div class="col-md-4"></div>
           <div class="col-lg-1">
-            <router-link :to="{name:'games'}" tag="button" class="btn btn-lg btn-primary btn-block" id="games_button" name="games_button">
+            <router-link :to="{name:'Game'}" tag="button" class="btn btn-lg btn-primary btn-block" id="games_button" name="games_button">
               <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
             </router-link>
           </div>

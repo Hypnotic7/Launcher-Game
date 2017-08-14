@@ -42,6 +42,7 @@
     <Content Include="src\assets\logo.png" />
     <Compile Include="src\router\index.ts" />
     <Content Include="src\components\Account.vue" />
+    <Content Include="src\components\Game.vue" />
     <Content Include="src\components\Login.vue" />
     <Content Include="src\components\MainMenu.vue" />
     <Content Include="tsconfig.json">
@@ -69,6 +70,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\services\create.account.service.ts" />
+    <TypeScriptCompile Include="src\services\game.service.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\services\login.service.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
